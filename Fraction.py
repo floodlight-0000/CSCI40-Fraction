@@ -1,3 +1,5 @@
+from math import gcd as math_gcd
+
 class Fraction(object):
 
     def __init__(self, numerator=0, denominator=1):
