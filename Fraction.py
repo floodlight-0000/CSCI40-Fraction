@@ -5,8 +5,17 @@ class Fraction(object):
         pass
 
     def gcd(a, b):
-        #TODO
-        pass
+        if a < b:
+            smaller_int = a
+            larger_int = b
+        else:
+            smaller_int = b
+            larger_int = a
+        
+        remainder = larger_int % smaller_int
+
+        return gcd(smaller_int, remainder)
+
 
     def get_numerator(self):
         #TODO
