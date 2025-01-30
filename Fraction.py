@@ -1,3 +1,5 @@
+from math import gcd as math_gcd
+
 class Fraction(object):
 
     def __init__(self, numerator=0, denominator=1):
@@ -6,7 +8,9 @@ class Fraction(object):
 
     def gcd(a, b):
         #TODO
-        pass
+        if a == 0 or a == b:
+            return 0
+        return math_gcd(a, b)
 
     def get_numerator(self):
         #TODO
