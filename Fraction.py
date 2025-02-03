@@ -70,4 +70,14 @@ class Fraction(object):
         return self.get_lowest_form()
 
     def get_lowest_form(self):
-        # TBI. needed for get_fraction
+        gcd = 0
+        while gcd != 1:
+            gcd = self.gcd(self.b)
+            self.a = int(self.a / gcd)
+            self.b = int(self.b / gcd)
+
+        if self.b < 0:
+            self.a = self.a * -1
+            self. b = self.b * -1
+            
+        return str(self.a) + "/" + str(self.b)
