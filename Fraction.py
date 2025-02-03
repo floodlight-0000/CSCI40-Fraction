@@ -58,7 +58,7 @@ class Fraction(object):
     def get_fraction(self):
         quo, rem = divmod(self.a, self.b)
         
-         if self.a == 0:
+        if self.a == 0:
             return "0"
 
         if abs(self.a) > abs(self.b) and rem == 0:
