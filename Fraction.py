@@ -9,13 +9,12 @@ class Fraction(object):
         pass
 
     def get_numerator(self):
-        #TODO
-        pass
+        return str(self._numerator)
 
     def get_denominator(self):
-        #TODO
-        pass
+        return str(self._denominator)
 
     def get_fraction(self):
-        #TODO
-        pass
+        if self._denominator == 1:
+            return str(self._numerator)
+        return f"{self._numerator}/{self._denominator}"
