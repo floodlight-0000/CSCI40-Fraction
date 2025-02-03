@@ -56,6 +56,8 @@ class Fraction(object):
         return str(self.b)
 
     def get_fraction(self):
+        quo, rem = divmod(self.a, self.b)
+        
          if self.a == 0:
             return "0"
 
