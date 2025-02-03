@@ -50,13 +50,22 @@ class Fraction(object):
         return get_gcd(a,b)
 
     def get_numerator(self):
-        #TODO
-        pass
+        return str(self.a)
 
     def get_denominator(self):
-        #TODO
-        pass
+        return str(self.b)
 
     def get_fraction(self):
-        #TODO
-        pass
+         if self.a == 0:
+            return "0"
+
+        if abs(self.a) > abs(self.b) and rem == 0:
+            return str(quo)
+        
+        if abs(self.a) > abs(self.b):
+            return str(self.a) + "/" + str(self.b)
+
+        return self.get_lowest_form()
+
+    def get_lowest_form(self):
+        # TBI. needed for get_fraction
