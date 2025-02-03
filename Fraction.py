@@ -5,8 +5,21 @@ class Fraction(object):
         pass
 
     def gcd(a, b):
-        #TODO
-        pass
+         def gcd(a, b):
+
+        if a == 0 and b == 0:
+            return 0
+        elif a == 0 and b == 1:
+            return 0
+        elif a == 1 and b == 0:
+            return 0
+
+        def get_gcd(a,b):
+            if a == 0:
+                return b
+            return get_gcd(b % a, a)
+        
+        return get_gcd(a,b)
 
     def get_numerator(self):
         #TODO
