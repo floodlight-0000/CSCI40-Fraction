@@ -1,5 +1,3 @@
-from math import gcd as math_gcd
-
 class Fraction(object):
 
     def __init__(self, numerator=0, denominator=1):
@@ -19,7 +17,24 @@ class Fraction(object):
                     denominator = int(denominator)
                 except:
                     invalid = True
+                    
+        elif isinstance(numerator, str) or isinstance(denominator, str):
+            invalid = True
 
+        if invalid:
+            numerator = 0
+            denominator = 1
+
+        self.a = numerator
+        self.b = denominator
+
+        if numerator % 1 != 0:
+            self.a = 0
+        if denominator == 0:
+            self.b = 1    
+            raise ZeroDivisionError
+
+    
     def gcd(a, b):
         #TODO
         pass
